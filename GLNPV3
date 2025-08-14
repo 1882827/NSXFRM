@@ -493,7 +493,25 @@ rebirths:AddSwitch("Farmar com o Peso", function(Value)
     end)
 end, "Auto Weight")
 
-local tabteleport = window:AddTab("Teleport")
+local switch = rebirths:AddSwitch("Travar Personagem", function(Value)
+    if Value then
+        
+        local currentPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        getgenv().posLock = game:GetService("RunService").Heartbeat:Connect(function()
+            if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = currentPos
+            end
+        end)
+    else
+        
+        if getgenv().posLock then
+            getgenv().posLock:Disconnect()
+            getgenv().posLock = nil
+        end
+    end
+end)
+
+local tabteleport = window:AddTab("Teletransporte")
 
 tabteleport:AddButton("Spawn", function()
     local player = game.Players.LocalPlayer
