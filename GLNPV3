@@ -32,7 +32,7 @@ tabFarme:AddButton("Gamepass AutoLift", function()
     end
 end, "Desbloqueia a gamepass de AutoLift gratis")
 
-tabFarme:AddSwitch("Auto Weight", function(Value)
+tabFarme:AddSwitch("Farmar com o Peso", function(Value)
     _G.AutoWeight = Value
     
     if Value then
@@ -84,13 +84,13 @@ task.spawn(function()
     end
 end)
 
-tabFarme:AddSwitch("Auto Eat Egg", function(state)
+tabFarme:AddSwitch("Comer Ovo Automaticamente", function(state)
     autoEatEnabled = state
 end)
 
-tabFarme:AddLabel("Teleport").TextSize = 25
+tabFarme:AddLabel("Teletransporte").TextSize = 25
 
-tabFarme:AddButton("Muscle King Gym", function()
+tabFarme:AddButton("Ilha do Rei", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -108,7 +108,7 @@ tabFarme:AddLabel("Complementos").TextSize = 25
 local folder = tabFarme:AddFolder("Anti AFK & Girar Roleta")
 
 local antiAFKEnabled = true
-folder:AddSwitch("Anti-AFK System", function(bool)
+folder:AddSwitch("Anti-AFK Sistema", function(bool)
     antiAFKEnabled = bool
     
     if bool then
@@ -122,7 +122,7 @@ folder:AddSwitch("Anti-AFK System", function(bool)
     end
 end, true)
 
-folder:AddSwitch("Auto Fortune Wheel", function(Value)
+folder:AddSwitch("Girar Roleta Automaticamente", function(Value)
     _G.autoFortuneWheelActive = Value
     if Value then
         local function openFortuneWheel()
@@ -511,9 +511,9 @@ local switch = rebirths:AddSwitch("Travar Personagem", function(Value)
     end
 end)
 
-local tabteleport = window:AddTab("Teletransporte")
+local teleportTab = window:AddTab("Teletransporte")
 
-tabteleport:AddButton("Spawn", function()
+teleportTab:AddButton("Inicio", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -521,12 +521,12 @@ tabteleport:AddButton("Spawn", function()
     
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Teletransporte",
-        Text = "Teleported",
+        Text = "Teletransportado al Inicio",
         Duration = 0
     })
 end)
 
-tabteleport:AddButton("Secret Area", function()
+teleportTab:AddButton("Ilha Secreta", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -534,12 +534,12 @@ tabteleport:AddButton("Secret Area", function()
     
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Teletransporte",
-        Text = "Teleported",
+        Text = "Teletransportado al area Secreta",
         Duration = 0
     })
 end)
 
-tabteleport:AddButton("Tiny Island", function()
+teleportTab:AddButton("Ilha de Menos de 10k forca", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -547,12 +547,12 @@ tabteleport:AddButton("Tiny Island", function()
     
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Teletransporte",
-        Text = "Teleported",
+        Text = "Teletransportado al area Diminuta",
         Duration = 0
     })
 end)
 
-tabteleport:AddButton("Teleport Frozen", function()
+teleportTab:AddButton("Ilha de 1 Rebirth", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -560,12 +560,12 @@ tabteleport:AddButton("Teleport Frozen", function()
     
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Teletransporte",
-        Text = "Teleported",
+        Text = "Teletransportado al area Congelada",
         Duration = 0
     })
 end)
 
-tabteleport:AddButton("Mythical", function()
+teleportTab:AddButton("Ilha de 5 Rebirth", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -573,12 +573,12 @@ tabteleport:AddButton("Mythical", function()
     
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Teletransporte",
-        Text = "Teleported",
+        Text = "Teletransportado al Area Mitica",
         Duration = 0
     })
 end)
 
-tabteleport:AddButton("Inferno", function()
+teleportTab:AddButton("Ilha de 15 Rebirth", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -586,12 +586,12 @@ tabteleport:AddButton("Inferno", function()
     
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Teletransporte",
-        Text = "Teleported",
+        Text = "Teletransportado al Infierno",
         Duration = 0
     })
 end)
 
-tabteleport:AddButton("Legend", function()
+teleportTab:AddButton("Ilha de 30 Rebirth", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -599,12 +599,12 @@ tabteleport:AddButton("Legend", function()
     
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Teletransporte",
-        Text = "Teleported",
+        Text = "Teletransportado a Leyenda",
         Duration = 0
     })
 end)
 
-tabteleport:AddButton("Muscle King Gym", function()
+teleportTab:AddButton("Ilha do Rei", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -612,12 +612,12 @@ tabteleport:AddButton("Muscle King Gym", function()
     
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Teletransporte",
-        Text = "Teleported",
+        Text = "Teletransportado al Rey Musculoso",
         Duration = 0
     })
 end)
 
-tabteleport:AddButton("Jungle", function()
+teleportTab:AddButton("Ilha de 60 Rebirth", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -625,12 +625,12 @@ tabteleport:AddButton("Jungle", function()
     
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Teletransporte",
-        Text = "Teleported",
+        Text = "Teletransportado a la Jungla",
         Duration = 0
     })
 end)
 
-tabteleport:AddButton("Brawl Lava", function()
+teleportTab:AddButton("Brawl Lava", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -638,12 +638,12 @@ tabteleport:AddButton("Brawl Lava", function()
     
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Teletransporte",
-        Text = "Teleported",
+        Text = "Teletransportado al Combate de Lava",
         Duration = 0
     })
 end)
 
-tabteleport:AddButton("Brawl Desert", function()
+teleportTab:AddButton("Brawl Deserto", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -651,12 +651,12 @@ tabteleport:AddButton("Brawl Desert", function()
     
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Teletransporte",
-        Text = "Teleported",
+        Text = "Teletransportado al Combate del Desierto",
         Duration = 0
     })
 end)
 
-tabteleport:AddButton("Brawl Regular", function()
+teleportTab:AddButton("Brawl Ringue", function()
     local player = game.Players.LocalPlayer
     local character = player.Character or player.CharacterAdded:Wait()
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -664,7 +664,7 @@ tabteleport:AddButton("Brawl Regular", function()
     
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Teletransporte",
-        Text = "Teleported",
+        Text = "Teletransportado al Combate de Playa",
         Duration = 0
     })
 end)
