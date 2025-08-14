@@ -103,7 +103,7 @@ tabFarme:AddButton("Muscle King Gym", function()
     })
 end)
 
-tabFarme:AddLabel("Teleport").TextSize = 25
+tabFarme:AddLabel("Complementos").TextSize = 25
 
 local folder = tabFarme:AddFolder("Anti AFK & Girar Roleta")
 
