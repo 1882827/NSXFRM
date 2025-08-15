@@ -376,7 +376,7 @@ function RecoveryPunch()
     end
 end
 
-Killing:AddButton("Restaurar Animacao do Soco", function()
+folder:AddButton("Restaurar Animacao do Soco", function()
     RecoveryPunch()
 end)
 
