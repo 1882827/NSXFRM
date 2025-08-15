@@ -754,7 +754,7 @@ local tabpets = window:AddTab("Comprar Pets")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local selectedPet = "Neon Guardian"
-local petDropdown = tabpets:AddDropdown("Select Pet", function(text)
+local petDropdown = tabpets:AddDropdown("Selecionar Pet", function(text)
     selectedPet = text
 end)
 
@@ -811,7 +811,7 @@ tabpets:AddSwitch("Auto Open Pet", function(bool)
 end)
 
 local selectedAura = "Blue Aura"
-local auraDropdown = tabpets:AddDropdown("Select Aura", function(text)
+local auraDropdown = tabpets:AddDropdown("Selecionar Aura", function(text)
     selectedAura = text
 end)
 
